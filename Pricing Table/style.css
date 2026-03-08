@@ -1,0 +1,171 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: #f4f7fb;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Pricing card styles */
+.pricing-card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid #eaeef5;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Recommended plan highlight */
+.pricing-card.recommended {
+  border: 2px solid #2563eb;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.12);
+}
+
+.recommended-tag {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2563eb;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 1.2rem;
+  border-radius: 30px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Plan name */
+.plan-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+/* Price */
+.price {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.price-period {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #64748b;
+  margin-left: 4px;
+}
+
+/* Features list */
+.features-list {
+  list-style: none;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.features-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 1rem;
+  color: #334155;
+  display: flex;
+  align-items: center;
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+/* simple checkmark style (already using unicode) */
+.features-list li::before {
+  content: '';
+  margin-right: 8px;
+}
+
+/* Button */
+.btn {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+  padding: 0.9rem 1.5rem;
+  border-radius: 60px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.btn:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+/* Make recommended button slightly different */
+.recommended .btn {
+  background: #eef2ff;
+  border-color: #2563eb;
+  color: #1e4bd2;
+}
+
+.recommended .btn:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ---------- Responsive for mobile ---------- */
+@media (max-width: 768px) {
+  .pricing-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 450px; /* keeps cards centered & readable */
+  }
+
+  .pricing-card {
+    padding: 2rem 1.2rem;
+  }
+
+  .price {
+    font-size: 2.4rem;
+  }
+
+  .recommended-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 1rem;
+  }
+}

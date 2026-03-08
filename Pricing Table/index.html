@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Pricing Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="pricing-container">
+    <!-- Basic Plan -->
+    <div class="pricing-card">
+      <h3 class="plan-name">Basic</h3>
+      <p class="price">$19<span class="price-period">/mo</span></p>
+      <ul class="features-list">
+        <li>✓ 5 projects</li>
+        <li>✓ 10GB storage</li>
+        <li>✓ Basic support</li>
+        <li>✗ Advanced analytics</li>
+        <li>✗ Custom domain</li>
+      </ul>
+      <button class="btn" data-plan="Basic">Buy Now</button>
+    </div>
+
+    <!-- Pro Plan (highlighted as recommended) -->
+    <div class="pricing-card recommended">
+      <span class="recommended-tag">Recommended</span>
+      <h3 class="plan-name">Pro</h3>
+      <p class="price">$49<span class="price-period">/mo</span></p>
+      <ul class="features-list">
+        <li>✓ Unlimited projects</li>
+        <li>✓ 100GB storage</li>
+        <li>✓ Priority support</li>
+        <li>✓ Advanced analytics</li>
+        <li>✗ Custom domain</li>
+      </ul>
+      <button class="btn" data-plan="Pro">Buy Now</button>
+    </div>
+
+    <!-- Enterprise Plan -->
+    <div class="pricing-card">
+      <h3 class="plan-name">Enterprise</h3>
+      <p class="price">$99<span class="price-period">/mo</span></p>
+      <ul class="features-list">
+        <li>✓ Unlimited projects</li>
+        <li>✓ 500GB storage</li>
+        <li>✓ 24/7 support</li>
+        <li>✓ Advanced analytics</li>
+        <li>✓ Custom domain</li>
+      </ul>
+      <button class="btn" data-plan="Enterprise">Buy Now</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
